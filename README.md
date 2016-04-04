@@ -26,5 +26,6 @@ Vous pourez ensuite lancer le serveur autant de fois que vous le souhaitez.
     
     Aller à cette url : "localhost:3000/signout"
     Puis se déconnecter de GitHub.com
+    403 ( Trop de requêtes faites a l'API temps d'attente > 1h )
   
 Cacquevelle Thomas.
