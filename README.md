@@ -1,6 +1,8 @@
 #1e Lancement:
   Pour le premier lancement il vous faudra drop les tables et les migrer. Ensuite, il vous suffira juste de lancer le serveur. 
   
+  "bundle install" => installation des bundles.
+  
   "Rake db:drop" => drop les tables.
   
   "Rake db:migrate" => migre les tables.
@@ -19,4 +21,10 @@ Vous pourez ensuite lancer le serveur autant de fois que vous le souhaitez.
     
     - Une recherche peut etre faite par rapport a un nom d'utilisateur : elle listera tous ses gists avec leur contenu.
 
+
+#Si erreur
+    
+    Aller à cette url : "localhost:3000/signout"
+    Puis se déconnecter de GitHub.com
+  
 Cacquevelle Thomas.
