@@ -18,7 +18,7 @@
 		        Taille du fichier : <span style="font-weight: bold; font-style: italic;"> <%= comment['size'] %></span> Octet.
 		    	</li>
 		    		<%= form_tag({controller: "categories", action: "add"}, method: "post") do %>
-				<!-- Input en hidden aurrais été mieux, j'ai voulue tester quelque chose avec la checkbox, j'ai pas eu le temps de le modifier  ... -->	
+				<!-- Input en hidden avec la valeur aurrais été mieux, j'ai voulue tester quelque chose avec la checkbox, j'ai pas eu le temps de le modifier  ... -->	
 						<%= check_box :field, comment['filename'], {}, "1", "0" %>
 						<%= select_tag :value , options_from_collection_for_select(Category.find_all_by_member_id(@id), :id, :name_cate) %>
 				  		<%= submit_tag("Catégoriser !") %>
