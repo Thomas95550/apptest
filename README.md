@@ -1,5 +1,6 @@
 #Test 
-  #1e Lancement:
+
+#1e Lancement:
   Pour le premier lancement il vous faudrait drop les table et les migré, après il vous suffiras juste de relancer le serveur comme bon vous sembles.
     "Rake db:drop" => drop les tables.
     "Rake db:migrate" => migre les tables.
