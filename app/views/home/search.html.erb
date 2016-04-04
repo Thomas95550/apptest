@@ -1,0 +1,33 @@
+<hr>
+<h4>Recherche de l'utilisateur #<%= @var %> </h4>
+<hr>
+<% @array_search.each do |comment| -%>
+	    <div class="card">
+		    <ul style="list-style-type: none;">
+		    	<li>
+		        Nom de fichier : <span style="font-weight: bold; font-style: italic;"><%= comment['filename'] %></span>
+		        </li>
+		        <li>
+		        Type : <span style="font-weight: bold; font-style: italic;"><%= comment['type'] %></span>
+		    	</li>
+
+		        <li>
+		        Contenue du fichier : <span style="font-weight: bold; font-style: italic;"><a href="<%= comment['raw_url'] %>"> Ici ! </a></span>
+		    	</li>
+		    	<li>
+		        Taille du fichier : <span style="font-weight: bold; font-style: italic;"> <%= comment['size'] %></span> Octet.
+		    	</li>
+		    	<li>
+		    					<form>
+		    		Catégorie: <select>
+							      <option>Mustard</option>
+							      <option>Ketchup</option>
+							      <option>Relish</option>
+							  	</select>
+								  <input type="submit" value="Submit">
+								</form> 
+		    	</li>
+		    </ul>
+		</div>
+	<% end -%>
+	

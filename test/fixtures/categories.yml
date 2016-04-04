@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_cate: MyString
+  gists_name: MyString
+  gists_raw_url: MyString
+  gists_type: MyString
+
+two:
+  name_cate: MyString
+  gists_name: MyString
+  gists_raw_url: MyString
+  gists_type: MyString

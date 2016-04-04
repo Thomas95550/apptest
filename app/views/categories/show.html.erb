@@ -1,0 +1,24 @@
+<hr>
+
+<h4>Catégories #<%= @category['name_cate'] %></h4>
+<a href="/gists">retour</a>
+<hr>
+
+<% @files.each do |comment| -%>
+	    <div class="card">
+		    <ul style="list-style-type: none;">
+		    	<li>
+		        Nom de fichier : <span style="font-weight: bold; font-style: italic;"><%= comment['name_gists'] %></span>
+		        </li>
+		        <li>
+		        Type : <span style="font-weight: bold; font-style: italic;"><%= comment['gists_type'] %></span>
+		    	</li>
+		        <li>
+		        Contenue du fichier : <span style="font-weight: bold; font-style: italic;"><a href="<%= comment['gists_raw_url'] %>"> Ici ! </a></span>
+		    	</li>
+		    	<li>
+		        Taille du fichier : <span style="font-weight: bold; font-style: italic;"> <%= comment['gists_size'] %></span> Octet.
+		    	</li>
+		    </ul>
+		</div>
+	<% end -%>

@@ -1,0 +1,48 @@
+<hr>
+<div class="row">
+    <div class="col-sm-10">
+	<h4 style='font-style: italic;'>Mes gists</h4>
+	<% @array.each do |comment| -%>
+	    <div class="card">
+		    <ul style="list-style-type: none;">
+		    	<li>
+		        Nom de fichier : <span style="font-weight: bold; font-style: italic;"><%= comment['filename'] %></span>
+		        </li>
+		        <li>
+		        Type : <span style="font-weight: bold; font-style: italic;"><%= comment['type'] %></span>
+		    	</li>
+		        <li>
+		        Contenue du fichier : <span style="font-weight: bold; font-style: italic;"><a href="<%= comment['raw_url'] %>"> Ici ! </a></span>
+		    	</li>
+		    	<li>
+		        Taille du fichier : <span style="font-weight: bold; font-style: italic;"> <%= comment['size'] %></span> Octet.
+		    	</li>
+		    		<%= form_tag({controller: "categories", action: "add"}, method: "post") do %>
+						<%= check_box :field, comment['filename'], {}, "1", "0" %>
+						<%= select_tag :value , options_from_collection_for_select(Category.find_all_by_member_id(@id), :id, :name_cate) %>
+				  		<%= submit_tag("Catégoriser !") %>
+		        	<% end %>
+		    </ul>
+		</div>
+	<% end -%>
+	</div>
+</div>
+
+<hr>
+
+<h4>Création de catégorie ! </h4>
+<%= form_tag({controller: "gists", action: "cate"}, method: "get") do %>
+    <div class="input-group">
+        <%= label_tag(:cate, "Catégorie") %>
+        <%= text_field_tag(:cate) %>
+  		<%= submit_tag("Envoyer") %>
+    </div>
+<% end %>
+
+<hr>
+
+<h4>Mes catégories</h4>
+<% @test.each do |catego| %>
+	    <li style='list-style-type: none;'><%= link_to catego.name_cate, seller_item_path(id: catego.id)%></li>
+<% end %>
+
