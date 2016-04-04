@@ -6,7 +6,7 @@
     "Rake db:migrate" => migre les tables.
     "Rails s" => lance le serveur.
 
-  #fonctionnalité
+#fonctionnalité
 
     -Connection avec omniauth
     
