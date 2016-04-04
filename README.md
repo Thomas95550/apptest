@@ -11,7 +11,7 @@ Vous pourez ensuite lancer le serveur autant de fois que vous le souhaitez.
 
 #fonctionnalité
 
-    -Connection avec omniauth
+    - Connection avec omniauth
     
     - Récuperation de ses propres gists stockés dans la DB (On peut ainsi voir le contenu du gist, il peut etre téléchargé par la suite via un "Clique droit => "Enregistrer sous...").
     
